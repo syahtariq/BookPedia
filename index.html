@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookPedia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(30, 42, 58, 0.8);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+        nav {
+            background-color: rgba(52, 73, 94, 0.8);
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        .search-bar {
+            margin: 30px auto;
+            width: 70%;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .highlight {
+            background-color: rgba(243, 156, 18, 0.8);
+            color: white;
+            font-size: 22px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 books per row */
+            gap: 20px;
+            margin: 20px;
+        }
+        .book-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .book-item:hover {
+            transform: scale(1.05);
+        }
+        .book-item img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .book-item h3 {
+            color: #34495e;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .book-item p {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: rgba(52, 73, 94, 0.8);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to BookPedia</h1>
+        <p>Your Digital Library</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="books.html">Books</a>
+        <a href="events.html">Events</a>
+		<a href="join-us.html">Join Us</a>
+        <a href="forum.html">Forum</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="search-bar">
+        <input type="text" id="search-bar" placeholder="Search books..." onkeyup="searchBooks()">
+    </div>
+
+    <div class="highlight">
+        <p>Reader's Choice Awards 2024 - Top Picks</p>
+    </div>
+
+    <div class="book-list" id="book-list">
+        <!-- Book 1 -->
+        <div class="book-item" data-title="Will You Love Me?">
+            <img src="https://d26olvxuieoyaa.cloudfront.net/catalog/product/cache/1/small_image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/9/7/9789672459675.jpg" alt="Will You Love Me?">
+            <h3>Will You Love Me?</h3>
+            <p>By Norhafsah Hamid</p>
+            <p><strong>Genre:</strong> Fiction, Romance</p>
+            <p>A captivating love story that explores the complexities of relationships, longing, and human connection. A touching read for those who appreciate heartfelt emotion.</p>
+        </div>
+        <!-- Book 2 -->
+        <div class="book-item" data-title="Not Here to Stay">
+            <img src="https://d26olvxuieoyaa.cloudfront.net/catalog/product/cache/1/small_image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/9/7/9786299802518.jpg" alt="Not Here to Stay">
+            <h3>Not Here to Stay</h3>
+            <p>By N.F Afrina</p>
+            <p><strong>Genre:</strong> Drama, Fiction</p>
+            <p>A compelling narrative of a young individual navigating the twists and turns of life, grappling with identity, belonging, and the search for purpose.</p>
+        </div>
+        <!-- Book 3 -->
+        <div class="book-item" data-title="The Big Book of Malaysian Horror Stories">
+            <img src="https://d26olvxuieoyaa.cloudfront.net/catalog/product/cache/1/small_image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/9/7/9789670042367.jpg" alt="The Big Book of Malaysian Horror Stories">
+            <h3>The Big Book of Malaysian Horror Stories</h3>
+            <p>By Amir Muhammad</p>
+            <p><strong>Genre:</strong> Horror</p>
+            <p>A chilling collection of Malaysian horror stories that will keep you up at night, filled with folklore, ghosts, and supernatural events that haunt the mind.</p>
+        </div>
+        <!-- Book 4 -->
+        <div class="book-item" data-title="THE GRIMOIRE OF GRAVE FATES">
+            <img src="https://d26olvxuieoyaa.cloudfront.net/catalog/product/cache/1/small_image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/9/7/9780593705773.jpg" alt="THE GRIMOIRE OF GRAVE FATES">
+            <h3>THE GRIMOIRE OF GRAVE FATES</h3>
+            <p>By Hana Alkaf</p>
+            <p><strong>Genre:</strong> Fantasy, Mystery</p>
+            <p>A dark fantasy about an ancient grimoire that holds the key to uncovering dark secrets, magic, and long-buried fates. A gripping tale for fantasy and mystery lovers.</p>
+        </div>
+        <!-- Book 5 -->
+        <div class="book-item" data-title="CHILDREN WE NEVER HAD">
+            <img src="https://d26olvxuieoyaa.cloudfront.net/catalog/product/cache/1/small_image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/9/7/9789670042695.jpg" alt="CHILDREN WE NEVER HAD">
+            <h3>CHILDREN WE NEVER HAD</h3>
+            <p>By Nadia Khan</p>
+            <p><strong>Genre:</strong> Drama, Family</p>
+            <p>An emotionally powerful story that explores the themes of loss, regret, and the bittersweet nature of dreams and unfulfilled desires.</p>
+        </div>
+        <!-- Book 6 -->
+        <div class="book-item" data-title="Heart of the Sun Warrior">
+            <img src="https://d26olvxuieoyaa.cloudfront.net/catalog/product/cache/1/small_image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/9/7/9780008479381.jpg" alt="Heart of the Sun Warrior">
+            <h3>Heart of the Sun Warrior</h3>
+            <p>By Tan Sue Lynn</p>
+            <p><strong>Genre:</strong> Fantasy, Adventure</p>
+            <p>A fierce heroine embarks on an epic quest in a vibrant world of myth and adventure. A perfect pick for readers who love a combination of action and heart.</p>
+        </div>
+        <!-- Book 7 -->
+        <div class="book-item" data-title="HADES">
+            <img src="https://d26olvxuieoyaa.cloudfront.net/catalog/product/cache/1/small_image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/9/7/9789670076102.jpg" alt="HADES">
+            <h3>HADES</h3>
+            <p>By Aishah Zainal</p>
+            <p><strong>Genre:</strong> Fantasy, Mythology</p>
+            <p>A reimagining of the ancient Greek myth of Hades and Persephone, this novel explores love, power, and betrayal in the depths of the underworld.</p>
+        </div>
+        <!-- Book 8 -->
+        <div class="book-item" data-title="THE TINIEST HOUSE OF TIME">
+            <img src="https://d26olvxuieoyaa.cloudfront.net/catalog/product/cache/1/small_image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/9/7/9789670076164.jpg" alt="THE TINIEST HOUSE OF TIME">
+            <h3>THE TINIEST HOUSE OF TIME</h3>
+            <p>By Sreedhevi Lyer</p>
+            <p><strong>Genre:</strong> Science Fiction, Fantasy</p>
+            <p>A surreal tale where time itself bends and stretches, challenging the way we perceive the world and our place in it. A mind-bending exploration of the concept of time.</p>
+        </div>
+        <!-- New Book: HE FOUND YOU LOST, AND GUIDED YOU -->
+        <div class="book-item" data-title="HE FOUND YOU LOST, AND GUIDED YOU">
+            <img src="https://d26olvxuieoyaa.cloudfront.net/catalog/product/cache/1/small_image/1000x1000/9df78eab33525d08d6e5fb8d27136e95/9/7/9789672459699.jpg" alt="HE FOUND YOU LOST, AND GUIDED YOU">
+            <h3>HE FOUND YOU LOST, AND GUIDED YOU</h3>
+            <p>By Ayesha Syahira</p>
+            <p><strong>Genre:</strong> Fiction, Spiritual</p>
+            <p>A deeply moving story that explores themes of faith, redemption, and the guiding presence of love in moments of confusion and despair. A beautifully written book for those seeking hope and inspiration.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BookPedia | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function searchBooks() {
+            let input = document.getElementById('search-bar').value.toLowerCase();
+            let books = document.querySelectorAll('.book-item');
+            
+            books.forEach(function(book) {
+                let title = book.getAttribute('data-title').toLowerCase();
+                if (title.includes(input)) {
+                    book.style.display = ''; // Show the book
+                } else {
+                    book.style.display = 'none'; // Hide the book
+                }
+            });
+        }
+    </script>
+</body>
+</html>

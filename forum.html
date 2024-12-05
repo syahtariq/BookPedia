@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Community - BookPedia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        .forum {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .forum h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .post {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .post:hover {
+            transform: scale(1.02);
+        }
+        .post .meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .post .meta img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+        .post .meta .user-info {
+            font-size: 16px;
+            color: #34495e;
+        }
+        .post .meta .user-info strong {
+            font-weight: bold;
+        }
+        .post h3 {
+            font-size: 24px;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        .post p {
+            color: #7f8c8d;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .reply-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .reply-btn:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Forum Community</h1>
+        <p>Connect with book lovers worldwide</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="books.html">Books</a>
+        <a href="events.html">Events</a>
+        <a href="join-us.html">Join Us</a>
+        <a href="forum.html">Forum</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="forum">
+        <h2>Latest Discussions</h2>
+
+        <!-- Post 1 -->
+        <div class="post">
+            <div class="meta">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Avatar">
+                <div class="user-info">
+                    <strong>John</strong> | <span>15 replies</span> | <span>Posted on: Jan 10, 2024</span>
+                </div>
+            </div>
+            <h3>What's Your Favorite Book Genre?</h3>
+            <p>Join the conversation and tell us about your favorite book genres!</p>
+            <button class="reply-btn">Reply</button>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post">
+            <div class="meta">
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User Avatar">
+                <div class="user-info">
+                    <strong>Alice</strong> | <span>22 replies</span> | <span>Posted on: Jan 12, 2024</span>
+                </div>
+            </div>
+            <h3>Best Books of 2024?</h3>
+            <p>Which books are you most excited about this year? Share your picks with us!</p>
+            <button class="reply-btn">Reply</button>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post">
+            <div class="meta">
+                <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="User Avatar">
+                <div class="user-info">
+                    <strong>Rob</strong> | <span>8 replies</span> | <span>Posted on: Jan 15, 2024</span>
+                </div>
+            </div>
+            <h3>Tips for New Readers</h3>
+            <p>If you're new to reading, here's a great place to ask for advice. Let's help each other out!</p>
+            <button class="reply-btn">Reply</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BookPedia | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
